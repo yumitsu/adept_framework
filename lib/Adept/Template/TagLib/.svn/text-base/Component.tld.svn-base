@@ -1,0 +1,1948 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://adept-project.org/ns/taglib" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://adept-project.org/ns/taglib taglib.xsd" >
+
+    <!-- Tag Templates -->
+    <!--  
+	<tag name="abstractBase" tag_class="Adept_Template_TagLib_View_Component_Tag">
+		<attribute name="id" ignore_expressions="true" />
+		<attribute name="this" />
+		<attribute name="clientId" />
+		<attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+    </tag_template> 
+     
+    <tag_template name="abstractControl" >
+       <attribute name="alt" description="Alternative text" />
+       <attribute name="cssClass" description="CSS Class" />
+       <attribute name="cssStyle" description="CSS Style" />
+       <attribute name="disabled" type="bool" description="CSS Style" />
+       <attribute name="title" description="Control title" />
+    </tag_template>
+    
+    <tag_template name="abstractCommand" use_template="abstractControl" >
+        <attribute name="action" /> 
+        <attribute name="actionName" />
+        <attribute name="alwaysValid" />
+        <attribute name="validator" />
+    </tag_template>
+    
+    <tag_template name="abstractInput" use_template="abstractControl">
+       <attribute name="converter" />
+       <attribute name="required" type="bool" />
+       <attribute name="value" />
+       <attribute name="requiredMessage" />
+       <attribute name="coverterMessage" />
+       <attribute name="validatorMessage" />
+    </tag_template>
+    -->
+    
+    <tag name="object" create_closed="true" body_content="ml" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="name" required="true" type="string" description="Instance name" />
+        <attribute name="class" required="true" type="string" metatype="PHPClass" description="Instance class" />
+        <attribute name="file" required="false" type="string" metatype="PHPFile" description="Php file path" />
+        <attribute name="scope" type="string" description="Scope" />
+        <attribute name="factory" type="string" description="Using factory class or alias" />
+        <attribute name="global" type="bool" description="Put object to global context." />
+        <parameter name="component" value="Adept_Component_Object_Factory"  />
+        <description>
+            Create new object instance. Allows to set object properties via Property tag.
+        </description>
+    </tag>  
+    
+    <tag name="property" create_closed="true" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="name" required="true" type="string" description="Param name" />
+        <attribute name="value" required="true" type="string" description="Param value" />
+        <parameter name="component" value="Adept_Component_Object_Property" />
+        <description>
+            Initialize object property after creation. See Adept Property Naming Convention for 
+            more information.  
+        </description>
+    </tag>    
+    
+    <!-- HANDLERS -->
+    
+    <tag name="viewHandler" create_closed="true" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="load" />
+        <parameter name="component" value="Adept_Component_ViewHandler" />
+    </tag>
+    
+    <tag name="phaseHandler" create_closed="true" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="beforeRestoreState" /> 
+        <attribute name="afterRestoreState" />
+        <attribute name="beforeHandleRequest" /> 
+        <attribute name="afterHandleRequest" />
+        <attribute name="beforeValidation" /> 
+        <attribute name="afterValidation" />
+        <attribute name="beforeUpdateModel" /> 
+        <attribute name="afterUpdateModel" />
+        <attribute name="beforeInvokeApplication" /> 
+        <attribute name="afterInvokeApplication" />
+        <attribute name="beforeSaveState" /> 
+        <attribute name="afterSaveState" />
+        <attribute name="beforeRender" />  
+        <attribute name="afterRender" />
+        <parameter name="component" value="Adept_Component_PhaseHandler" />
+    </tag>    
+        
+    
+    <!-- Base Tags -->
+
+    <tag name="jsPlace" create_closed="true" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="packaged" type="bool" />
+        <attribute name="pattern" required="true" type="string" />
+        <parameter name="component" value="Adept_Component_Resource_JsPlace" />
+    </tag>
+    
+    <tag name="cssPlace" create_closed="true" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="packaged" type="bool" />
+        <attribute name="pattern" required="true" type="string" />
+        <parameter name="component" value="Adept_Component_Resource_CssPlace" />
+    </tag>
+    
+    <tag name="jsLogger" create_closed="true" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="writer" default="console"/>
+        <parameter name="component" value="Adept_Component_Client_Logger" />
+    </tag>
+    
+    <tag name="selectItem" create_closed="true" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="title" type="string" required="true" />
+        <attribute name="value" type="string" required="true" />
+        <attribute name="disabled" type="bool" />
+        <parameter name="component" value="Adept_Component_Select_Item" />
+    </tag>
+
+    <tag name="facet" tag_class="Adept_Template_TagLib_View_FacetTag">
+        <attribute name="name" type="string" required="true" />
+        <parameter name="component" value="Adept_Component_Facet" />
+    </tag>
+
+    <tag name="selectItems" body_content="empty" create_closed="true" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="valueProperty" type="string" />
+        <attribute name="titleProperty" type="string" />
+        <attribute name="values" required="true" />
+        <parameter name="component" value="Adept_Component_Select_Items" />
+    </tag>
+
+    <tag name="set" body_content="empty" create_closed="true" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="name" type="string" required="true" />
+        <attribute name="binding" type="string" required="true" />
+        <attribute name="value" type="string" required="true" />
+        <attribute name="renderOnly" type="bool" />
+        <parameter name="component" value="Adept_Component_Set" />
+    </tag>
+
+    <tag name="setIfEmpty" body_content="empty" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="name" type="string" required="true" />
+        <attribute name="binding" type="string" required="true" />
+        <attribute name="value" type="string" required="true" /> 
+        <attribute name="renderOnly" type="bool" />
+        <parameter name="component" value="Adept_Component_SetIfEmpty" />
+    </tag>
+
+    <tag name="validator" body_content="ml" create_closed="true" tag_class="Adept_Template_TagLib_View_ValidatorTag" dynamic_attributes="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="class" type="string" required="true" />
+        <attribute name="alias" type="string" />
+        <parameter name="component" value="Adept_Component_Validator" />
+    </tag>
+    
+    <tag name="attribute" body_content="empty" create_closed="true" tag_class="Adept_Template_TagLib_View_AttributeTag">
+        <attribute name="name" type="string" required="true" />
+        <attribute name="value" type="string" required="true" />
+    </tag> 
+    
+    <tag name="converter" tag_class="Adept_Template_TagLib_View_ConverterTag" create_closed="true">
+        <attribute name="class" />    
+    </tag>
+
+    <tag name="dependence" body_content="empty" create_closed="true" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="id" type="string" required="true" />
+    </tag>
+    
+    <tag name="listener" body_content="empty" create_closed="true" tag_class="Adept_Template_TagLib_View_ListenerTag">
+        <attribute name="event" type="string" required="true" description="Event name" />
+        <attribute name="binding" type="string" required="true" description="Event handler" />
+    </tag>    
+
+    <tag name="actionTrigger" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="actionTrigger">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="param" type="string" required="true" />
+        <parameter name="component" value="Adept_Component_Action_Trigger" />
+    </tag>
+    
+    <tag name="outputText" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="default" type="string" />
+        <attribute name="value" type="string" required="true" />
+        <attribute name="verbatim" type="bool" />
+        
+        <parameter name="component" value="Adept_Component_OutputText" />
+    </tag>
+    
+    <tag name="action" body_content="empty" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="action" type="string" /> 
+        <attribute name="actionName" type="string" />
+        <attribute name="alwaysValid" type="bool" />
+        <attribute name="validator" type="string" />
+        
+        <parameter name="component" value="Adept_Component_Action_Case" />
+    </tag>
+
+    <tag name="optional" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="cond" type="string" required="true" />
+        <attribute name="forceProcess" type="bool" />
+        <parameter name="component" value="Adept_Component_Core_Optional" />
+    </tag>
+
+    <tag name="default" tag_class="Adept_Template_TagLib_View_FacetTag">
+        <parameter name="component" value="Adept_Component_Core_Default" />
+        <parameter name="facetName" value="default" />
+    </tag>
+
+    <tag name="list" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="from" type="string" required="true" />
+        <attribute name="key" type="string" />
+        <attribute name="value" type="string" required="true" />
+        <attribute name="properties" type="string" />
+        <attribute name="renderOnly" type="bool" />
+        <attribute name="current" type="string" />
+        <attribute name="currentValue" type="string" />
+        <attribute name="currentKey" type="string" />
+        <attribute name="forceProcess" type="bool" />
+        <parameter name="component" value="Adept_Component_List" />
+    </tag>
+    
+    <tag name="loop" tag_class="Adept_Template_TagLib_View_ComponentTag">
+    	<attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="from" type="string" required="true" />
+        <attribute name="to" type="string" required="true" />
+        <attribute name="step" type="string" default="1" />
+        
+        
+        <attribute name="key" type="string" />
+        <attribute name="value" type="string" required="true" />
+        <attribute name="properties" type="string" />
+        <attribute name="renderOnly" type="bool" />
+        <attribute name="current" type="string" />
+        <attribute name="currentValue" type="string" />
+        <attribute name="currentKey" type="string" />
+        <attribute name="forceProcess" type="bool" />
+        <parameter name="component" value="Adept_Component_Loop" />
+    </tag>
+    
+    <tag name="partition" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <parameter name="component" value="Adept_Component_Partition" />
+    </tag>
+    
+    <tag name="gridView" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="from" type="string" required="true" />
+        <attribute name="key" type="string" />
+        <attribute name="value" type="string" required="true" />
+        <attribute name="properties" type="string" />
+        <attribute name="renderOnly" type="bool" />
+        <attribute name="current" type="string" />
+        <attribute name="currentValue" type="string" />
+        <attribute name="currentKey" type="string" />
+        <attribute name="forceProcess" type="bool" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />        
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <parameter name="component" value="Adept_Component_Grid_View" />
+    </tag>    
+
+    <tag name="gridColumn" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="cssClass" description="CSS class" />
+        <attribute name="cssStyle" description="CSS style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="titleClass" description="CSS Class" />
+        <attribute name="titleStyle" description="CSS Style" />
+        <attribute name="title" description="Control title" />
+        <parameter name="component" value="Adept_Component_Grid_Column" />
+    </tag>    
+
+    <tag name="form" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="disabled" type="bool" description="CSS Style" />
+        <attribute name="title" description="Control title" />
+        <attribute name="disabled" description="Control title" type="bool" />
+        
+        <attribute name="accept" type="string" />
+        <attribute name="acceptCharset" type="string" />
+        <attribute name="action" type="string" />
+        <attribute name="method" type="string" />
+        <attribute name="name" type="string" />
+        <attribute name="enctype" type="string" />
+        <attribute name="target" type="string" />
+        <attribute name="required" type="bool" />
+        <attribute name="converter" />
+        <attribute name="rendererType" type="string" />
+        <attribute name="rendered" type="bool" />
+        <attribute name="ajax" type="bool" default="true" />
+        <attribute name="namingContainer" type="bool" default="true" />
+        <attribute name="controllerNeeded" type="bool" default="false" />
+        <attribute name="onsubmit" />
+        
+        <parameter name="component" value="Adept_Component_Form" />
+        <parameter name="browserEvents" value="onsubmit" />
+    </tag>
+
+    <tag name="throbber" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="disabled" type="bool" description="CSS Style" />
+        <attribute name="title" description="Control title" />
+        
+        <parameter name="component" value="Adept_Component_Throbber" />
+        <parameter name="browserEvents" value="onclick, onmouseover, onmouseout" />
+    </tag>
+
+    <tag name="image" create_closed="true" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="title" description="Control title" />
+        
+        <attribute name="align" type="string" />
+        <attribute name="src" type="string" />
+        <attribute name="wspace" type="int" />
+        <attribute name="hspace" type="int" />
+        <attribute name="width" type="string" />
+        <attribute name="height" type="string" />
+        <attribute name="border" type="int" />
+        <attribute name="useMap" type="string" />
+        <attribute name="isMap" type="string" />
+        
+        <parameter name="component" value="Adept_Component_Html_Image" />
+        <parameter name="browserEvents" value="onclick, ondblclick, onmousedown, 
+            onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup" />
+    </tag>
+    
+    <tag name="icon" tag_class="Adept_Template_TagLib_View_ComponentTag" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="title" description="Control title" />
+        
+        <attribute name="align" type="string" />
+        <attribute name="src" type="string" />
+        <attribute name="size" type="string" />
+        <attribute name="border" type="int" />
+        
+        <parameter name="component" value="Adept_Component_Html_Icon" />
+        <parameter name="browserEvents" value="onclick, ondblclick, onmousedown, 
+            onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup" />
+    </tag>    
+
+    <tag name="div" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="alt" description="Alternative text" />
+        
+        <attribute name="cssClass" description="CSS Class"  />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="disabled" type="bool" description="CSS Style" />
+        <attribute name="title" description="Control title" />
+        
+        <attribute name="lang" type="string" />
+        <attribute name="dir" type="string" />
+        <attribute name="align" type="string" />
+        <attribute name="sender" type="string" />
+        <parameter name="component" value="Adept_Component_Html_Div" />
+        <parameter name="browserEvents" value="onclick, onmouseover, onmouseout" />
+    </tag>
+    
+    <tag name="span" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="disabled" type="bool" description="CSS Style" />
+        <attribute name="title" description="Control title" />
+        
+        <attribute name="lang" type="string" />
+        <attribute name="dir" type="string" />
+        <attribute name="align" type="string" />
+        <attribute name="sender" type="string" />
+        <parameter name="component" value="Adept_Component_Html_Span" />
+        
+        <parameter name="browserEvents" value="onclick, onmouseover, onmouseout" />
+        
+    </tag>
+    
+    <tag name="toolBox" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="toolBox">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="disabled" type="bool" description="CSS Style" />
+        <attribute name="title" description="Control title" />
+        
+        <attribute name="persistent" type="bool" />
+        
+        <attribute name="cssPrefix" type="string" /> 
+        <attribute name="open" type="bool" />
+        <attribute name="ajaxLoading" type="bool" />
+        <attribute name="absoluteId" type="bool" />
+        <parameter name="component" value="Adept_Component_Message_ToolBox" />
+        <parameter name="browserEvents" value="onclick, onmouseover, onmouseout" />
+    </tag>
+    
+        
+    <tag name="balloon" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="balloon">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="for" type="string" description="" />
+        
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="disabled" type="bool" description="CSS Style" />
+        <attribute name="title" description="Control title" />
+        
+        
+        <attribute name="ajaxLoading" type="bool" />
+        <attribute name="absoluteId" type="bool" />
+        <parameter name="component" value="Adept_Component_Message_Balloon" />
+        <parameter name="browserEvents" value="onclick, onmouseover, onmouseout" />
+    </tag>
+
+    <tag name="label" body_content="ml" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="for" type="string" />
+        <attribute name="errorStyle" type="string" />
+        <attribute name="errorClass" type="string" />
+        <attribute name="cssClass" type="string" />
+        <attribute name="cssStyle" type="string" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <parameter name="component" value="Adept_Component_Form_Label" />
+    </tag>
+
+    <tag name="message" body_content="empty" tag_class="Adept_Template_TagLib_View_ComponentTag" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="for" type="string" />
+        <attribute name="group" type="string" />
+
+        <attribute name="cssClass" type="string" />
+        <attribute name="cssStyle" type="string" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+
+        <attribute name="errorClass" type="string" />
+        <attribute name="informClass" type="string" />
+        <attribute name="warningClass" type="string" />
+        <attribute name="errorStyle" type="string" />
+        <attribute name="informStyle" type="string" />
+        <attribute name="warningStyle" type="string" />
+        <parameter name="component" value="Adept_Component_Message_Item" />
+    </tag>
+
+    <tag name="messageList" body_content="empty" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="messageList" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="group" type="string" />
+        <attribute name="cssClass" type="string" />
+        <attribute name="cssStyle" type="string" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="errorClass" type="string" />
+        <attribute name="informClass" type="string" />
+        <attribute name="warningClass" type="string" />
+        <attribute name="errorStyle" type="string" />
+        <attribute name="informStyle" type="string" />
+        <attribute name="warningStyle" type="string" />
+        <parameter name="component" value="Adept_Component_Message_List" />
+    </tag>
+
+    <tag name="textBox" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="textBox" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="converter" />
+        <attribute name="required" type="bool" />
+        <attribute name="value" />
+        <attribute name="title" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+        <attribute name="validator" />
+        
+        <attribute name="readOnly" type="bool" />
+        <attribute name="maxLength" type="int" />
+        <attribute name="size" type="int" />
+        <attribute name="onchange" />
+        <attribute name="onkeydown" />
+        <attribute name="onkeyup" />
+        <attribute name="onkeypress" />
+        <parameter name="component" value="Adept_Component_Form_TextBox" />
+        <parameter name="browserEvents" value="onchange, onkeyup, onkeydown, onkeypress" />
+    </tag>
+    
+    <tag name="hidden" tag_class="Adept_Template_TagLib_View_ComponentTag" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool" description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        
+        <attribute name="converter" />
+        <attribute name="required" type="bool" />
+        <attribute name="value" />
+        <attribute name="title" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+        
+        <parameter name="component" value="Adept_Component_Form_Hidden" />
+    </tag>
+
+    <tag name="passwordBox" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="passwordBox" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        
+        <attribute name="cssClass" type="string" />
+        <attribute name="cssStyle" type="string" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="converter" />
+        <attribute name="required" type="bool" />
+        <attribute name="value" />
+        <attribute name="title" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+        
+        <attribute name="readOnly" type="bool" />
+        <attribute name="maxLength" type="int" />
+        <attribute name="size" type="int" />
+        <parameter name="component" value="Adept_Component_Form_PasswordBox" />
+        <parameter name="browserEvents" value="onchange, onkeyup" />
+    </tag>
+
+    <tag name="textArea" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="textArea" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="disabled" description="Control title" type="bool" />
+        <attribute name="converter" />
+        <attribute name="required" type="bool" />
+        <attribute name="value" />
+        <attribute name="title" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+        
+        <attribute name="readOnly" type="bool" />
+        <attribute name="cols" type="int" />
+        <attribute name="rows" type="int" />
+        <parameter name="component" value="Adept_Component_Form_TextArea" />
+    </tag>
+    
+    <tag name="fileUpload" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="textBox" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        
+        <attribute name="converter" />
+        <attribute name="required" type="bool" />
+        <attribute name="value" />
+        <attribute name="title" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+        
+        <attribute name="readOnly" type="bool" />
+        <attribute name="maxLength" type="int" />
+        <attribute name="size" type="int" />
+        <parameter name="component" value="Adept_Component_Form_FileUpload" />
+        <parameter name="browserEvents" value="onchange, onkeyup" />
+    </tag>
+    
+    <tag name="multiFileUpload" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="textBox" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        
+        <attribute name="converter" />
+        <attribute name="required" type="bool" />
+        <attribute name="value" />
+        <attribute name="title" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+        
+        <attribute name="maxFilesCount" />
+        <attribute name="immediateUpload" type="bool" />
+        
+        <attribute name="containerCssClass" />
+        <attribute name="containerCssStyle" />
+        
+        
+        <attribute name="addLinkClass" />
+        <attribute name="addLinkStyle" />
+        <attribute name="addLinkText" />
+        
+        <attribute name="deleteLinkClass" />
+        <attribute name="deleteLinkStyle" />
+        <attribute name="deleteLinkText" />
+        
+        <attribute name="readOnly" type="bool" />
+        <attribute name="maxLength" type="int" />
+        <attribute name="size" type="int" />
+        <parameter name="component" value="Adept_Component_Form_MultiFileUpload" />
+        <parameter name="browserEvents" value="onchange, onkeyup" />
+    </tag>    
+        
+
+    <tag name="listBox" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="listBox">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+
+        <attribute name="cssStyle" />
+        <attribute name="cssClass" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        <attribute name="converter" />
+        <attribute name="required" type="bool" />
+        <attribute name="value" />
+        <attribute name="title" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+        
+        <attribute name="multiple" type="bool" />
+        <attribute name="maxLength" type="int" />
+        <attribute name="size" type="int" />
+        
+        <parameter name="component" value="Adept_Component_Form_ListBox" />
+        <parameter name="browserEvents" value="onchange, onselect" />
+    </tag>
+
+    <tag name="checkBox" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="checkBox" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        <attribute name="converter" />
+        <attribute name="required" type="bool" />
+        <attribute name="value" />
+        <attribute name="title" />
+        <attribute name="checkedValue" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+        
+        <attribute name="cssStyle" />
+        <attribute name="cssClass" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="label" type="string" />
+        <attribute name="onchange" type="string" />
+        <attribute name="onclick" type="string" />
+        <parameter name="component" value="Adept_Component_Form_CheckBox" />
+        <parameter name="browserEvents" value="onchange,onclick" />
+    </tag>
+
+    <tag name="checkGroup" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="checkGroup">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+        
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="layoutCssClass" description="CSS Class" />
+        <attribute name="layoutCssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        <attribute name="converter" />
+        <attribute name="required" type="bool" />
+        <attribute name="value" />
+        <attribute name="title" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+        
+        <attribute name="placement" type="string" />
+        <parameter name="component" value="Adept_Component_Form_CheckGroup" />
+    </tag>
+
+    <tag name="radioGroup" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="radioGroup">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+
+        <attribute name="layoutCssClass" description="CSS Class" />
+        <attribute name="layoutCssStyle" description="CSS Style" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        
+        <attribute name="converter" />
+        <attribute name="required" type="bool" />
+        <attribute name="value" />
+        <attribute name="title" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+        
+        <attribute name="placement" type="string" />
+        <attribute name="layout" type="string" />
+        <attribute name="onchange" type="string" />
+        <parameter name="component" value="Adept_Component_Form_RadioGroup" />
+        <parameter name="browserEvents" value="onchange" />
+    </tag>
+
+    <tag name="radioButton" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="Radio Button" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="disabled" description="Control title" type="bool" />
+        
+        <attribute name="converter" />
+        <attribute name="required" type="bool" />
+        <attribute name="checkedValue" />
+        <attribute name="value" />
+        <attribute name="title" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+        
+        <attribute name="label" type="string" />
+        <attribute name="group" type="string" />
+        <parameter name="component" value="Adept_Component_Form_RadioButton" />
+    </tag>
+
+    <tag name="button" tag_class="Adept_Template_TagLib_View_ComponentTag" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="disabled" type="bool" description="CSS Style" />
+        <attribute name="title" description="Control title" />
+        
+        <attribute name="action" type="string" /> 
+        <attribute name="actionName" type="string" />
+        <attribute name="alwaysValid" type="bool" />
+        <attribute name="validator" type="string" />
+        
+        <attribute name="ajax" type="bool" />
+        <attribute name="forceServerSide" type="bool" />
+        <parameter name="component" value="Adept_Component_Form_Button" />
+        <parameter name="browserEvents" value="onclick" />
+    </tag>
+    
+    
+    <tag name="actionButton" tag_class="Adept_Template_TagLib_View_ComponentTag" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="disabled" type="bool" description="CSS Style" />
+        <attribute name="title" description="Control title" />
+        
+        <attribute name="action" type="string" /> 
+        <attribute name="actionName" type="string" />
+        
+        
+        <parameter name="component" value="Adept_Component_Form_ActionButton" />
+        <parameter name="browserEvents" value="onclick" />
+    </tag>
+
+    <tag name="commandLink" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="commandLink" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="disabled" type="bool" description="CSS Style" />
+        <attribute name="title" description="Control title" />
+        
+        <attribute name="action" type="string" /> 
+        <attribute name="actionName" type="string" />
+        <attribute name="alwaysValid" type="bool" />
+        <attribute name="validator" type="string" />
+        
+        <attribute name="ajax" type="bool" />
+        <parameter name="component" value="Adept_Component_Form_CommandLink" />
+    </tag>
+    
+    <tag name="actionLink" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="commandLink" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="disabled" type="bool" description="CSS Style" />
+        <attribute name="title" description="Control title" />
+        
+        <attribute name="action" type="string" /> 
+        <attribute name="actionName" type="string" />
+        <attribute name="onclick" type="string" />
+        
+        <parameter name="browserEvents" value="onclick" />
+        <parameter name="component" value="Adept_Component_Form_ActionLink" />
+    </tag>
+    
+    <tag name="actionImage" tag_class="Adept_Template_TagLib_View_ComponentTag" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="disabled" type="bool" description="CSS Style" />
+        <attribute name="title" description="Control title" />
+        <attribute name="src" description="Image source url" />
+        <attribute name="border" description="Pixel thickness of the border around the image" />
+        <attribute name="align" description="Alignment of text following the control" />
+        
+        <attribute name="action" type="string" /> 
+        <attribute name="actionName" type="string" />
+        
+        
+        <parameter name="component" value="Adept_Component_Form_ActionImage" />
+        <parameter name="browserEvents" value="onclick" />
+    </tag>
+    
+    <tag name="richEdit" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="richEdit" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="disabled" description="Control title" type="bool" />
+        <attribute name="converter" />
+        <attribute name="required" type="bool" />
+        <attribute name="value" />
+        <attribute name="title" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+        
+        <attribute name="basePath" />
+        <attribute name="width" />
+        <attribute name="height" />
+        <attribute name="configPath" />
+        <attribute name="mode" />
+        
+        <attribute name="readOnly" type="bool" />
+        <parameter name="component" value="Adept_Component_RichEdit" />
+    </tag>    
+
+    <tag name="pager" tag_class="Adept_Template_TagLib_View_ComponentTag" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="persistent"  type="bool" default="true"/> 
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="disabled" type="bool" description="CSS Style" />
+        <attribute name="title" description="Control title" />
+        <attribute name="ajaxLoading" description="Using Ajax" type="bool" />
+        <attribute name="totalItems" type="int" />
+        <attribute name="itemsPerPage" type="int" />
+        <attribute name="separator" type="string" />
+        <parameter name="component" value="Adept_Component_Pager" />
+    </tag>
+
+    <tag name="selectDate" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="Select Date" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="converter" />
+        <attribute name="required" type="bool" />
+        <attribute name="value" />
+		<attribute name="title" description="Control title" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+        
+        <attribute name="minYear" type="int" />
+        <attribute name="maxYear" type="int" />
+        <parameter name="component" value="Adept_Component_DateTime_SelectDate" />
+    </tag>
+
+    <tag name="datePicker" tag_class="Adept_Template_TagLib_View_ComponentTag" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="converter" />
+        <attribute name="required" type="bool" />
+        <attribute name="value" />
+        <attribute name="title" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+        
+        <attribute name="readOnly" type="bool" />
+        <attribute name="maxLength" type="int" />
+        <attribute name="size" type="int" />
+        <attribute name="dateFormat" type="string" />
+        <attribute name="buttonClass" type="string" />
+        <attribute name="buttonStyle" type="string" />
+        <attribute name="buttonTitle" type="string" />
+        
+        <parameter name="component" value="Adept_Component_DateTime_DatePicker" />
+        <parameter name="browserEvents" value="onchange, onkeyup" />
+    </tag>
+    
+    <tag name="colorPicker" tag_class="Adept_Template_TagLib_View_ComponentTag" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="converter" />
+        <attribute name="required" type="bool" />
+        <attribute name="value" />
+        <attribute name="title" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+
+        <attribute name="buttonClass" type="string" />
+        <attribute name="buttonStyle" type="string" />
+        <attribute name="buttonTitle" type="string" />
+        <attribute name="readOnly" type="bool" />
+        
+        <parameter name="component" value="Adept_Component_ColorPicker" />
+    </tag>    
+    
+<!-- 
+    <tag name="sandBox" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="sandBox">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="exception" type="string" />
+        <parameter name="component" value="Adept_Component_SandBox" />
+    </tag>
+-->
+    <tag name="clientListener" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="clientListener">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="event" type="string" />
+        <attribute name="for" type="string" />
+        <parameter name="component" value="Adept_Component_Client_Listener" />
+    </tag>
+
+    <tag name="alertCommand" body_content="empty" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="alertCommand" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="message" type="string" />
+        <parameter name="component" value="Adept_Component_Client_Command_Alert" />
+    </tag>
+
+    <tag name="confirmCommand" body_content="empty" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="confirmCommand" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="message" type="string" />
+        <parameter name="component" value="Adept_Component_Client_Command_Confirm" />
+    </tag>
+
+    <tag name="overrideMethod" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="overrideMethod">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="name" type="string" />
+        <parameter name="component" value="Adept_Component_Client_OverrideMethod" />
+    </tag>
+
+    <tag name="methodAttribute" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="methodAttribute">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="type" type="string" />
+        <attribute name="for" type="string" />
+        <parameter name="component" value="Adept_Component_Client_MethodAttribute" />
+    </tag>
+
+    <tag name="effect" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="type" type="string" />
+        <attribute name="for" type="string" />
+        <parameter name="component" value="Adept_Component_Client_Effect" />
+    </tag>
+
+    <tag name="parallelEffect" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="Parallel Effect">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="type" type="string" />
+        <attribute name="for" type="string" />
+        <parameter name="component" value="Adept_Component_Client_ParallelEffect" />
+    </tag>
+
+    <tag name="infoBox" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="infoBox">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="disabled" type="bool" description="CSS Style" />
+        <attribute name="title" description="Control title" />
+        
+        <attribute name="ajaxLoading" type="bool" />
+        <parameter name="component" value="Adept_Component_Message_InfoBox" />
+        <parameter name="browserEvents" value="onclick, onmouseover, onmouseout" />
+    </tag>
+    
+    <tag name="rating" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="rating">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="binding" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="converter" />
+        <attribute name="value" />
+        <attribute name="requiredMessage" />
+        <attribute name="coverterMessage" />
+        <attribute name="validatorMessage" />
+        
+        <attribute name="readOnly" type="bool" />
+        <attribute name="maxValue" type="int" />
+        <parameter name="component" value="Adept_Component_Rating" />
+    </tag>
+    
+    <tag name="window" body_content="ml" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="cssPrefix" />
+        <attribute name="cssClass" />
+        <attribute name="title" />
+        <attribute name="width" />    
+        <attribute name="height" />
+        <attribute name="top" />
+        <attribute name="left" />
+        <attribute name="ajaxLoading" type="bool" default="true" />
+        <attribute name="forceUpdate" type="bool" default="true" />
+        <attribute name="resizable" type="bool" default="true" />
+        <attribute name="minimizable" type="bool" default="true" />
+        <attribute name="maximizable" type="bool" default="true" />
+        <attribute name="draggable" type="bool" default="true" />
+        <attribute name="showEffect" />
+        <attribute name="hideEffect" />
+
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <parameter name="component" value="Adept_Component_Window" />
+    </tag>
+    
+    <tag name="tabulator" body_content="ml" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="selected" description="Id of selected tabItem" type="string" />
+        
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="persistent" />
+        	
+        <attribute name="width" />    
+        <attribute name="height" />        
+        <attribute name="cssPrefix" />
+        <attribute name="title" />
+        
+        <parameter name="component" value="Adept_Component_Tabulator" />
+    </tag>
+    
+    <tag name="tabItem" body_content="ml" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="title" />
+
+        <attribute name="ajaxLoading" description="CSS Class" type="bool" />
+        <attribute name="forceUpdate" description="CSS Class" type="bool" />
+        
+        <parameter name="component" value="Adept_Component_TabItem" />
+    </tag>
+    
+    <!--  Navigation -->
+    
+    <!--  deprecated, user navigationMenu instead -->
+    <tag name="tabMenu" body_content="ml" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="width" />
+        <attribute name="height" />
+        <attribute name="cssPrefix" />
+        <attribute name="title" />
+        <attribute name="href" />
+        <attribute name="pattern" />
+        
+        <parameter name="component" value="Adept_Component_Navigation_TabMenu" />
+    </tag>
+        
+    <tag name="navigationMenu" body_content="ml" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="width" />
+        <attribute name="height" />
+        <attribute name="cssPrefix" />
+        <attribute name="title" />
+        <attribute name="href" />
+        <attribute name="pattern" />
+        
+        <parameter name="component" value="Adept_Component_Navigation_Menu" />
+    </tag>    
+        
+    <tag name="navigationMenu" body_content="ml" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        
+        <attribute name="width" />
+        <attribute name="height" />
+        <attribute name="cssPrefix" />
+        <attribute name="title" />
+        <attribute name="href" />
+        <attribute name="pattern" />
+        
+        <parameter name="component" value="Adept_Component_Navigation_Menu" />
+    </tag>   
+            
+    <tag name="navigationItem" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="navigationItem" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        
+        <attribute name="alt" description="Alternative text" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="disabledClass" description="CSS Class" />
+        <attribute name="disabledStyle" description="CSS Style" />
+        
+        <attribute name="selectedClass" description="CSS Class" />
+        <attribute name="selectedStyle" description="CSS Style" />
+        
+        <attribute name="visitedClass" description="CSS Class" />
+        <attribute name="visitedStyle" description="CSS Style" />
+        
+        <attribute name="disabled" type="bool" description="" />
+        <attribute name="selected" type="bool" description="" />
+        <attribute name="visited" type="bool" description="" />
+        
+        <attribute name="href" description="Control title" />
+        <attribute name="pattern" description="Control title" />
+        
+        <attribute name="title" description="Control title" />
+        
+        <attribute name="action" type="string" /> 
+        <attribute name="actionName" type="string" />
+        <attribute name="onclick" type="string" />
+        
+        <parameter name="browserEvents" value="onclick" />
+        <parameter name="component" value="Adept_Component_Navigation_Item" />
+    </tag>    
+    
+    <!-- Requirements -->
+    
+    <tag name="requireJs" body_content="ml" tag_class="Adept_Template_TagLib_View_ComponentTag" create_closed="true">
+        <attribute name="src" required="true" />
+        <parameter name="component" value="Adept_Component_Resource_RequireJs" />
+    </tag>
+    
+    <tag name="requireCss" body_content="ml" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="src" required="true" />
+        <parameter name="component" value="Adept_Component_Resource_RequireCss" />
+    </tag>
+
+    <!-- Client commands -->
+    
+    <tag name="alertCommand" body_content="empty" tag_class="Adept_Template_TagLib_View_ComponentTag" create_closed="true">
+        <attribute name="message" required="true" />
+        <attribute name="rendered" type="bool" />
+        <attribute name="forceClientId" />
+        <attribute name="clientId" />
+        <parameter name="component" value="Adept_Component_Client_Command_Alert" />
+    </tag>
+
+    <tag name="confirmCommand" body_content="empty" tag_class="Adept_Template_TagLib_View_ComponentTag" create_closed="true">
+        <attribute name="message" required="true" />
+        <attribute name="rendered" type="bool" />
+        <attribute name="forceClientId" />
+        <attribute name="clientId" />
+        <parameter name="component" value="Adept_Component_Client_Command_Confirm" />
+    </tag>
+
+    <tag name="showWindowCommand" body_content="empty" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="windowId" required="true" />
+        <attribute name="center" type="bool" />
+        <attribute name="modal" type="bool" />
+        <attribute name="rendered" type="bool" />
+        <attribute name="forceClientId" />
+        <attribute name="clientId" />
+        <attribute name="placement" />
+        <parameter name="component" value="Adept_Component_Client_Command_ShowWindow" />
+    </tag>
+
+    <tag name="hideWindowCommand" body_content="empty" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="windowId" required="true" />
+        <attribute name="rendered" type="bool" />
+        <attribute name="forceClientId" />
+        <attribute name="clientId" />
+        <parameter name="component" value="Adept_Component_Client_Command_HideWindow" />
+    </tag>
+
+    <!-- Client commands -->
+    
+    <tag name="patternValidator" body_content="empty" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="pattern" required="true" />
+        <attribute name="clientSide" type="bool" />
+        <attribute name="eventType" />
+        <attribute name="clientId" />
+        <parameter name="component" value="Adept_Component_Validator_Pattern" />
+    </tag>
+
+    <tag name="createPopupWindowCommand" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="createPopupWindowCommand">
+       <attribute name="pageUrl" />
+       <attribute name="windowId" />
+       <attribute name="scrollbars" />
+       <attribute name="resizable" />
+       <attribute name="centered" />
+       <attribute name="width" />
+       <attribute name="height" />
+       <attribute name="top" />
+       <attribute name="left" />
+       
+       <parameter name="component" value="Adept_Component_Client_Command_CreatePopupWindow" />
+    </tag>
+    
+    <tag name="cache" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="cacheComponent">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="key" />
+        <attribute name="group" />
+        <attribute name="lifeTime" />
+        <attribute name="valid" />
+        <attribute name="forceProcess" type="bool" />
+        <parameter name="component" value="Adept_Component_Cache" />
+    </tag>
+    
+    <tag name="noCache" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="cacheComponent">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+       <parameter name="component" value="Adept_Component_NoCache" />
+    </tag>    
+    
+    <tag name="timer" tag_class="Adept_Template_TagLib_View_ComponentTag" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="disabled" description="Control title" type="bool" />
+        
+        <attribute name="action" type="string" /> 
+        <attribute name="partition" type="string" />
+        <attribute name="actionName" type="string" />
+        
+        <attribute name="interval" type="int" />
+        
+        <parameter name="component" value="Adept_Component_Timer" />
+    </tag>    
+
+    <!-- I18n -->
+    
+    <tag name="locale" tag_class="Adept_Template_TagLib_View_ComponentTag">
+       <attribute name="lang" type="string" />
+       <attribute name="this" type="string" description="Component $this pointer binding. " />
+       <parameter name="component" value="Adept_Component_I18n_Locale" />
+    </tag>    
+
+    <tag name="flashMovie" tag_class="Adept_Template_TagLib_View_ComponentTag" create_closed="true">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="width" />
+        <attribute name="height" />
+        <attribute name="bgcolor" />
+        <attribute name="align" />
+        <attribute name="src" />
+        <attribute name="flashvars" />
+        
+        <parameter name="component" value="Adept_Component_Media_FlashMovie" />
+    </tag>
+	
+	<tag name="suggestArea" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="toolBox">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="for" />
+        <attribute name="delay" />
+        <attribute name="minSize" />
+        <attribute name="partition" />
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="selectedCssClass" description="CSS Class" />
+        <attribute name="positioned" type="bool" default="true" />
+        <attribute name="hidden" type="bool" default="true" />
+        <attribute name="url" />
+        
+        <parameter name="component" value="Adept_Component_Message_SuggestArea" />
+    </tag>
+    
+    <tag name="suggestItem" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="toolBox">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="cssClass" description="CSS Class" />
+        <attribute name="cssStyle" description="CSS Style" />
+        <attribute name="class" property="cssClass" description="CSS class" />
+        <attribute name="style" property="cssStyle" description="CSS style" />
+        <attribute name="suggest"/>
+        <parameter name="component" value="Adept_Component_Message_SuggestItem" />
+    </tag>
+    
+    <tag name="googleMap" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="googleMap">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="width"/>
+        <attribute name="height"/>
+        <attribute name="zoom"/>
+        <attribute name="type"/>
+        <attribute name="latitude"/>
+        <attribute name="longitude"/>
+        <parameter name="component" value="Adept_Component_Google_Map" />
+    </tag>
+    
+     <tag name="googleMarker" tag_class="Adept_Template_TagLib_View_ComponentTag" display_name="googleMarker">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="rendered" type="bool"
+            description="Setup to false if component should not be rendered. True is default." />
+        <attribute name="rendererType" description="Using renderer type. " />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        <attribute name="persistent"/>
+        <attribute name="latitude"/>
+        <attribute name="longitude"/>
+        <attribute name="title" />
+        <attribute name="description"/>
+        <attribute name="icon" />
+        <attribute name="transparentIcon" />
+        <attribute name="draggable" default="true" type="bool"/>
+        <parameter name="component" value="Adept_Component_Google_Marker" />
+    </tag>
+    
+</taglib>
+

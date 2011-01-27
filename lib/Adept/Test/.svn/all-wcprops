@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/177/framework/trunk/lib/Adept/Test
+END
+TestSuite.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/177/framework/trunk/lib/Adept/Test/TestSuite.php
+END
+TestCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/177/framework/trunk/lib/Adept/Test/TestCase.php
+END
+TextUITestSuite.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/177/framework/trunk/lib/Adept/Test/TextUITestSuite.php
+END

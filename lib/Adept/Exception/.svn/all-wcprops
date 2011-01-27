@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/216/framework/trunk/lib/Adept/Exception
+END
+RedirectLoop.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/177/framework/trunk/lib/Adept/Exception/RedirectLoop.php
+END
+InternalRedirect.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/177/framework/trunk/lib/Adept/Exception/InternalRedirect.php
+END
+UnsupportedOperaton.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/177/framework/trunk/lib/Adept/Exception/UnsupportedOperaton.php
+END
+RuntimeExceptionHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/177/framework/trunk/lib/Adept/Exception/RuntimeExceptionHandler.php
+END
+Redirect.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/Exception/Redirect.php
+END
+FileOpen.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/Exception/FileOpen.php
+END
+AbstractMethod.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/177/framework/trunk/lib/Adept/Exception/AbstractMethod.php
+END
+Warning.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/177/framework/trunk/lib/Adept/Exception/Warning.php
+END
+IllegalState.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/177/framework/trunk/lib/Adept/Exception/IllegalState.php
+END
+NullPointer.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/177/framework/trunk/lib/Adept/Exception/NullPointer.php
+END
+IllegalArgument.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/177/framework/trunk/lib/Adept/Exception/IllegalArgument.php
+END
+Error403.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/Exception/Error403.php
+END
+Error404.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/Exception/Error404.php
+END
+Image.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/177/framework/trunk/lib/Adept/Exception/Image.php
+END
+FileSystem.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/177/framework/trunk/lib/Adept/Exception/FileSystem.php
+END

@@ -1,0 +1,58 @@
+
+.week-hour-select { 
+    empty-cells: show;
+}
+
+.week-hour-select td, .week-hour-select th {
+    height: 20px;
+    width: 20px;
+    color: red;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.week-hour-select th {
+    background-color: #ccc;   
+}
+
+.week-hour-select .button-off {
+    border-color: #fff #777 #777 #fff; 
+    border-style: solid;
+    border-width: 2px;
+    color: #000;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.week-hour-select .button-on {
+    border-color: #777 #fff #fff #777; 
+    border-style: solid;
+    border-width: 2px;
+    color: #000;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.week-hour-select .cell-on {
+    background-color: #92FC98;
+    cursor: pointer;
+}
+
+.week-hour-select .cell-hover {
+    border: 1px solid #666;
+}
+
+.week-hour-select .cell-off {
+    background-color: #fc9294;
+    cursor: pointer;
+}
+
+.legend-on {
+     background-color: #92FC98;
+     width: 20px;
+}
+
+.legend-off {
+    background-color: #fc9294;
+    width: 20px;
+}

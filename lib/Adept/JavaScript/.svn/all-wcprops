@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/485/framework/trunk/lib/Adept/JavaScript
+END
+Packer.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/177/framework/trunk/lib/Adept/JavaScript/Packer.php
+END
+Builder.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/JavaScript/Builder.php
+END
+ParseMaster.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/177/framework/trunk/lib/Adept/JavaScript/ParseMaster.php
+END

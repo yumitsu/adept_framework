@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/251/framework/trunk/lib/Adept/ImageKit/Gd/Filter
+END
+Base.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/177/framework/trunk/lib/Adept/ImageKit/Gd/Filter/Base.php
+END
+ColorSpace.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/177/framework/trunk/lib/Adept/ImageKit/Gd/Filter/ColorSpace.php
+END
+WaterMark.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/177/framework/trunk/lib/Adept/ImageKit/Gd/Filter/WaterMark.php
+END
+Sharpen.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/251/framework/trunk/lib/Adept/ImageKit/Gd/Filter/Sharpen.php
+END
+Resize.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/177/framework/trunk/lib/Adept/ImageKit/Gd/Filter/Resize.php
+END
+Crop.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/177/framework/trunk/lib/Adept/ImageKit/Gd/Filter/Crop.php
+END
+CropThumbnail.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/177/framework/trunk/lib/Adept/ImageKit/Gd/Filter/CropThumbnail.php
+END

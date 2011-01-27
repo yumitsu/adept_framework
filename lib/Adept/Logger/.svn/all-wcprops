@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/195/framework/trunk/lib/Adept/Logger
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/177/framework/trunk/lib/Adept/Logger/Exception.php
+END
+Record.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/177/framework/trunk/lib/Adept/Logger/Record.php
+END

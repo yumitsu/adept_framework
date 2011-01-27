@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/177/framework/trunk/lib/Adept/Renderer/Client/Command
+END
+Confirm.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/177/framework/trunk/lib/Adept/Renderer/Client/Command/Confirm.php
+END
+Alert.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/177/framework/trunk/lib/Adept/Renderer/Client/Command/Alert.php
+END

@@ -1,0 +1,144 @@
+@CHARSET "UTF-8";
+
+.a-overlay {
+    background-color: #85BBEF;
+    filter: alpha(opacity =   60);
+    -moz-opacity: 0.6;
+    opacity: 0.6;
+    width: 100%;
+    position: absolute;
+    top: 0pt;
+    left: 0pt;
+    z-index: 100;
+    padding: 0px;
+    margin: 0px;
+}
+
+.a-window {
+    display: none;
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    width: 400px;
+    padding: 0px;
+    margin: 0px;
+    z-index: 1000;
+    
+}
+
+.a-window-show {
+    display: block;
+}
+
+.a-window-table-top-left {
+    background: transparent url(../../../img/Adept/window/default/left-top.gif) no-repeat 0 0;
+    width: 10px;
+    height: 25px;
+}
+
+.a-window-table-top-middle {
+    background: transparent url(../../../img/Adept/window/default/top-middle.gif) repeat-x 0 0;
+    height: 25px;
+}
+
+.a-window-table-top-right {
+    background: transparent url(../../../img/Adept/window/default/right-top.gif) no-repeat 0 0;
+    width: 10px;
+    height: 25px;
+}
+
+.a-window-table-middle-left {
+    background: transparent url(../../../img/Adept/window/default/frame-left.gif) repeat-y top left;
+    width: 7px;
+}
+
+.a-window-table-middle {
+    background-color: white;
+    empty-cells: show;
+    vertical-align: top;
+    text-align: center;
+}
+
+.a-window-table-middle-right {
+    background: transparent url(../../../img/Adept/window/default/frame-right.gif) repeat-y top right;
+    width: 7px;
+}
+
+.a-window-table-bottom-left {
+    background: transparent url(../../../img/Adept/window/default/bottom-left-c.gif) no-repeat 0 0;
+    width: 7px;
+    height: 7px;
+    white-space: nowrap;
+    empty-cells: show;
+}
+
+.a-window-table-bottom-middle {
+    background: transparent url(../../../img/Adept/window/default/bottom-middle.gif) repeat-x 0 0;
+    height: 7px;
+    font-size: 5px;
+    line-height: 1em;
+}
+
+.a-window-spacer {
+    background: url(../../../img/Adept/window/default/spacer.gif);
+    height: 1px;
+    width: 1px;
+}
+
+.a-window-table-bottom-right {
+    background: transparent url(../../../img/Adept/window/default/bottom-right-c.gif) no-repeat 0 0;
+    width: 7px;
+    height: 7px;
+    
+}
+
+
+
+.a-window-head {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    background-color: #FFF;
+    
+}
+a-draggable{
+    cursor: move;
+}
+    
+
+.a-window-title {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.a-draggable{
+    cursor: move;
+}
+.a-window-icons {
+    position: relative;
+    float: right;
+}
+
+.a-window-icons-close {
+    background: transparent url(../../../img/Adept/window/default/button-close-focus.gif) no-repeat scroll 0pt;
+    cursor: pointer;
+    height: 23px;
+    width: 23px;
+}
+
+.a-window-content-border {
+    background-color: white;
+}
+
+.a-window-content {
+    background-color: white;
+    height: 100%;
+}
+
+.a-window-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    empty-cells: show;
+    margin: 0px;
+    padding: 0px;
+}@CHARSET "UTF-8";

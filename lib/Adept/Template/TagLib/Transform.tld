@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://adept-project.org/ns/taglib" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://adept-project.org/ns/taglib taglib.xsd" >
+    
+    <!-- Transform API -->
+    
+    <tag name="include" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" required="false" type="string"  />
+        <attribute name="file" required="true" />
+        <attribute name="clientId" required="false" type="string"  />
+        <attribute name="namingContainer" required="false" type="boolean"  />
+        <parameter name="component" value="Adept_Component_Transform_Include" />
+    </tag>
+
+    <tag name="objectParam" body_content="empty" tag_class="Adept_Template_TagLib_View_ComponentTag" >
+       <attribute name="name" required="true" />
+       <attribute name="value" required="true" />
+       <parameter name="component" value="Adept_Component_Transform_UseObject" />
+    </tag>
+ 
+    <tag name="useObject" body_content="empty" tag_class="Adept_Template_TagLib_View_ComponentTag" >
+       <attribute name="name" required="true" />
+       <attribute name="value" required="true" />
+       <parameter name="component" value="Adept_Component_Transform_UseObject" />
+    </tag>
+ 
+    <tag name="param" body_content="empty" tag_class="Adept_Template_TagLib_View_ComponentTag" >
+       <attribute name="name" required="true" />
+       <attribute name="value" required="true" />
+       <parameter name="component" value="Adept_Component_Transform_Param" />
+    </tag>
+    
+    <tag name="decorate" tag_class="Adept_Template_TagLib_View_ComponentTag">
+       <attribute name="file" required="true"  />
+       <attribute name="id" required="false" type="string"  />
+       <attribute name="clientId" required="false" type="string"  />
+       <attribute name="namingContainer" required="false" type="boolean"  />
+       <parameter name="component" value="Adept_Component_Transform_Decorate" />
+    </tag>
+    
+    <tag name="insert" tag_class="Adept_Template_TagLib_View_ComponentTag" >
+       <attribute name="name" required="true" />
+       <parameter name="component" value="Adept_Component_Transform_Insert" />
+    </tag>
+    
+    <tag name="define" tag_class="Adept_Template_TagLib_View_ComponentTag" >
+       <attribute name="name" required="true" />
+       <parameter name="component" value="Adept_Component_Transform_Define" />
+    </tag>
+
+</taglib>

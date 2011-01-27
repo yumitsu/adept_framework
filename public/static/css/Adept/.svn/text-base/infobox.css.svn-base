@@ -1,0 +1,29 @@
+.a-infobox {
+    background:#fff none repeat scroll 0%;
+    border:1px solid #999;
+    color:#000;
+    display:none;
+    padding:5px;
+    position:absolute;
+    width:400px;
+    z-index:90000;
+}
+.a-infobox-show {
+    display:block;
+}
+.a-infobox-title {
+    border-bottom:1px solid #999;
+    color:#999;
+}
+.a-infobox-icon {
+    background:transparent url(../../img/Adept/InfoBox/close.gif) no-repeat scroll right top;
+    cursor:pointer;
+    height:11px;
+    position:absolute;
+    right:5px;
+    top:5px;
+    width:11px;
+}
+.a-infobox-icon-selected {
+    background:transparent url(../../img/Adept/InfoBox/close_cross.gif) no-repeat scroll right top;
+}

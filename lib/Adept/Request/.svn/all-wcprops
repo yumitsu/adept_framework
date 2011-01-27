@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/429/framework/trunk/lib/Adept/Request
+END
+FileParser.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/Request/FileParser.php
+END
+Http.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/429/framework/trunk/lib/Adept/Request/Http.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/177/framework/trunk/lib/Adept/Request/Abstract.php
+END

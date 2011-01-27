@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/485/framework/trunk/lib/Adept/Response
+END
+Writer.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/485/framework/trunk/lib/Adept/Response/Writer.php
+END
+Http.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/177/framework/trunk/lib/Adept/Response/Http.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/242/framework/trunk/lib/Adept/Response/Abstract.php
+END

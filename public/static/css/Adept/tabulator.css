@@ -1,0 +1,60 @@
+
+/* A:TABSELECTOR */
+
+.a-tabulator {
+}
+
+.a-tabulator .a-tabselectors {
+    position: relative;
+    left: 0;
+    top: 1px;
+    height: 22px;
+    z-index: 1;    
+}
+
+.a-tabulator .a-tab {
+	width: 100%;
+/*	border-width: 1px 1px 1px 1px;
+	border-style: solid solid solid solid;
+	border-color: #b9cfd8; */
+	border-top: 1px solid #ccc;
+	padding: 8px 0 8px 0;
+}
+
+.a-tabulator .a-tabselector {
+	height: 22px;
+	padding: 0;
+	border-style: none;
+    white-space: nowrap;
+    font-size: 11px;
+    color: black;
+    border-bottom: 1px solid #ccc;
+}
+
+.a-tabulator .a-tabselector .a-tabselector-text {
+    padding: 8px 8px 4px 8px;
+}
+
+.a-tabulator .a-tabspace {
+    border-bottom: 1px solid #ccc;
+}
+
+/* Hovered state */
+
+.a-tabulator .a-tabselector-hov {
+    background-color: #eee;
+    cursor: pointer;
+}
+.a-tabulator .a-tabselector-sel {
+    cursor: default;
+    background-color: #336;
+    color: #fff;
+/*    
+    border-width: 1px 1px 1px 1px;
+    border-color: #ccc #ccc #fff #ccc;
+    border-style: solid; */
+}
+
+.a-tabulator .a-tabselector-disabled {
+	color: #ccc;
+}

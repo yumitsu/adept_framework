@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/215/framework/trunk/lib/Adept/Config
+END
+List.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/177/framework/trunk/lib/Adept/Config/List.php
+END
+Ini.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/177/framework/trunk/lib/Adept/Config/Ini.php
+END
+Xml.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/215/framework/trunk/lib/Adept/Config/Xml.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/215/framework/trunk/lib/Adept/Config/Abstract.php
+END
+Locator.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/177/framework/trunk/lib/Adept/Config/Locator.php
+END
+Php.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/177/framework/trunk/lib/Adept/Config/Php.php
+END

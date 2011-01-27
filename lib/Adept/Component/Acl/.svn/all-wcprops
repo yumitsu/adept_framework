@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/338/framework/trunk/lib/Adept/Component/Acl
+END
+NotLoggedIn.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Acl/NotLoggedIn.php
+END
+CheckAcl.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/338/framework/trunk/lib/Adept/Component/Acl/CheckAcl.php
+END
+Allow.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Acl/Allow.php
+END
+Deny.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Acl/Deny.php
+END
+Role.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Acl/Role.php
+END
+NotRole.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Acl/NotRole.php
+END
+LoggedIn.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Acl/LoggedIn.php
+END

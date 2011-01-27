@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/326/framework/trunk/lib/Adept/ClassKit
+END
+Delegate.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/177/framework/trunk/lib/Adept/ClassKit/Delegate.php
+END
+Util.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/326/framework/trunk/lib/Adept/ClassKit/Util.php
+END
+LazyProxy.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/ClassKit/LazyProxy.php
+END
+Proxy.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/193/framework/trunk/lib/Adept/ClassKit/Proxy.php
+END
+Comparable.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/177/framework/trunk/lib/Adept/ClassKit/Comparable.php
+END

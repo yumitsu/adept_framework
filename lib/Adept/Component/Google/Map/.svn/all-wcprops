@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/501/framework/trunk/lib/Adept/Component/Google/Map
+END
+MarkersIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/501/framework/trunk/lib/Adept/Component/Google/Map/MarkersIterator.php
+END
+Marker.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/501/framework/trunk/lib/Adept/Component/Google/Map/Marker.php
+END
+Markers.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/501/framework/trunk/lib/Adept/Component/Google/Map/Markers.php
+END

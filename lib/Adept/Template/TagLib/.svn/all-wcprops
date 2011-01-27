@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/485/framework/trunk/lib/Adept/Template/TagLib
+END
+taglib.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/177/framework/trunk/lib/Adept/Template/TagLib/taglib.xsd
+END
+Acl.tld
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/177/framework/trunk/lib/Adept/Template/TagLib/Acl.tld
+END
+Component.tld
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/485/framework/trunk/lib/Adept/Template/TagLib/Component.tld
+END
+CoreView.tld
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/378/framework/trunk/lib/Adept/Template/TagLib/CoreView.tld
+END
+Core.tld
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/177/framework/trunk/lib/Adept/Template/TagLib/Core.tld
+END
+Transform.tld
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/370/framework/trunk/lib/Adept/Template/TagLib/Transform.tld
+END

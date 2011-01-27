@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/373/framework/trunk/lib/Adept/Util
+END
+Serializer.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/320/framework/trunk/lib/Adept/Util/Serializer.php
+END
+Array.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/177/framework/trunk/lib/Adept/Util/Array.php
+END
+Dispatch.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/177/framework/trunk/lib/Adept/Util/Dispatch.php
+END
+Uri.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/177/framework/trunk/lib/Adept/Util/Uri.php
+END
+Image.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/177/framework/trunk/lib/Adept/Util/Image.php
+END
+FileSystem.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/177/framework/trunk/lib/Adept/Util/FileSystem.php
+END
+ListIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/193/framework/trunk/lib/Adept/Util/ListIterator.php
+END
+Encoding.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/177/framework/trunk/lib/Adept/Util/Encoding.php
+END
+RangeIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/Util/RangeIterator.php
+END
+String.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/373/framework/trunk/lib/Adept/Util/String.php
+END
+MapIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/193/framework/trunk/lib/Adept/Util/MapIterator.php
+END

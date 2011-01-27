@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Core
+END
+Case.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Core/Case.php
+END
+Switch.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Core/Switch.php
+END
+PlaceHolder.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Core/PlaceHolder.php
+END
+Default.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Core/Default.php
+END
+Optional.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Core/Optional.php
+END

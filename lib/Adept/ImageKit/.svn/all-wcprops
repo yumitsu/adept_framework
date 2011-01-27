@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/369/framework/trunk/lib/Adept/ImageKit
+END
+ColorSpace.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/177/framework/trunk/lib/Adept/ImageKit/ColorSpace.php
+END
+Provider.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/337/framework/trunk/lib/Adept/ImageKit/Provider.php
+END
+Container.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/ImageKit/Container.php
+END
+ResizeType.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/177/framework/trunk/lib/Adept/ImageKit/ResizeType.php
+END
+ImageType.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/ImageKit/ImageType.php
+END
+Filter.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/177/framework/trunk/lib/Adept/ImageKit/Filter.php
+END

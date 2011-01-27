@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/485/framework/trunk/lib/Adept/Template
+END
+RootNode.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/177/framework/trunk/lib/Adept/Template/RootNode.php
+END
+ViewExecutor.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/375/framework/trunk/lib/Adept/Template/ViewExecutor.php
+END
+TextNode.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/375/framework/trunk/lib/Adept/Template/TextNode.php
+END
+Parser.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/378/framework/trunk/lib/Adept/Template/Parser.php
+END
+Executor.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/375/framework/trunk/lib/Adept/Template/Executor.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/Template/Exception.php
+END
+TagAttribute.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/177/framework/trunk/lib/Adept/Template/TagAttribute.php
+END
+Expression.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/177/framework/trunk/lib/Adept/Template/Expression.php
+END
+TagLibrary.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/177/framework/trunk/lib/Adept/Template/TagLibrary.php
+END
+Locator.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/177/framework/trunk/lib/Adept/Template/Locator.php
+END
+Dictionary.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/177/framework/trunk/lib/Adept/Template/Dictionary.php
+END
+ViewCompiler.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/375/framework/trunk/lib/Adept/Template/ViewCompiler.php
+END
+Location.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/177/framework/trunk/lib/Adept/Template/Location.php
+END
+Compiler.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/375/framework/trunk/lib/Adept/Template/Compiler.php
+END
+Tag.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/177/framework/trunk/lib/Adept/Template/Tag.php
+END
+ParsingObserver.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/177/framework/trunk/lib/Adept/Template/ParsingObserver.php
+END
+AttributeInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/177/framework/trunk/lib/Adept/Template/AttributeInfo.php
+END
+ViewBuilder.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/378/framework/trunk/lib/Adept/Template/ViewBuilder.php
+END
+PhpWriter.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/Template/PhpWriter.php
+END
+Node.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/375/framework/trunk/lib/Adept/Template/Node.php
+END
+Builder.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/379/framework/trunk/lib/Adept/Template/Builder.php
+END
+TagInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/177/framework/trunk/lib/Adept/Template/TagInfo.php
+END

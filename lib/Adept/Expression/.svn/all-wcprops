@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/375/framework/trunk/lib/Adept/Expression
+END
+Binding.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/Expression/Binding.php
+END
+Invokable.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/177/framework/trunk/lib/Adept/Expression/Invokable.php
+END
+DelegateAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/177/framework/trunk/lib/Adept/Expression/DelegateAdapter.php
+END
+MethodBinding.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/177/framework/trunk/lib/Adept/Expression/MethodBinding.php
+END
+Parser.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/177/framework/trunk/lib/Adept/Expression/Parser.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/177/framework/trunk/lib/Adept/Expression/Exception.php
+END
+NativePhp.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/177/framework/trunk/lib/Adept/Expression/NativePhp.php
+END
+Evaluable.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/177/framework/trunk/lib/Adept/Expression/Evaluable.php
+END
+Context.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/Expression/Context.php
+END
+EvalException.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/177/framework/trunk/lib/Adept/Expression/EvalException.php
+END
+ValueBinding.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/177/framework/trunk/lib/Adept/Expression/ValueBinding.php
+END
+Factory.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/Expression/Factory.php
+END
+BindingParser.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/177/framework/trunk/lib/Adept/Expression/BindingParser.php
+END

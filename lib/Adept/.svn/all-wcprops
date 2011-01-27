@@ -1,0 +1,233 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/!svn/ver/502/framework/trunk/lib/Adept
+END
+ImageKit.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/177/framework/trunk/lib/Adept/ImageKit.php
+END
+SourceCompiler.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/177/framework/trunk/lib/Adept/SourceCompiler.php
+END
+UploadedFile.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/177/framework/trunk/lib/Adept/UploadedFile.php
+END
+CollectionDecorator.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/193/framework/trunk/lib/Adept/CollectionDecorator.php
+END
+DataObject.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/349/framework/trunk/lib/Adept/DataObject.php
+END
+MessageSet.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/177/framework/trunk/lib/Adept/MessageSet.php
+END
+ViewLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/177/framework/trunk/lib/Adept/ViewLoader.php
+END
+StateStorage.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/177/framework/trunk/lib/Adept/StateStorage.php
+END
+Config.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/177/framework/trunk/lib/Adept/Config.php
+END
+Object.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/177/framework/trunk/lib/Adept/Object.php
+END
+Bundle.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/350/framework/trunk/lib/Adept/Bundle.php
+END
+test.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/284/framework/trunk/lib/Adept/test.php
+END
+Logger.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/177/framework/trunk/lib/Adept/Logger.php
+END
+Message.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/177/framework/trunk/lib/Adept/Message.php
+END
+Debug.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/333/framework/trunk/lib/Adept/Debug.php
+END
+Collection.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/177/framework/trunk/lib/Adept/Collection.php
+END
+ClassLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/454/framework/trunk/lib/Adept/ClassLoader.php
+END
+ConfigLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/177/framework/trunk/lib/Adept/ConfigLoader.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/330/framework/trunk/lib/Adept/Exception.php
+END
+ConfigRegistry.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/177/framework/trunk/lib/Adept/ConfigRegistry.php
+END
+Lifecycle.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/177/framework/trunk/lib/Adept/Lifecycle.php
+END
+Locale.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/478/framework/trunk/lib/Adept/Locale.php
+END
+Access.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/177/framework/trunk/lib/Adept/Access.php
+END
+Locator.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/177/framework/trunk/lib/Adept/Locator.php
+END
+Cache.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/344/framework/trunk/lib/Adept/Cache.php
+END
+Application.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/330/framework/trunk/lib/Adept/Application.php
+END
+CollectionIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/193/framework/trunk/lib/Adept/CollectionIterator.php
+END
+Verbatim.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/244/framework/trunk/lib/Adept/Verbatim.php
+END
+Mailer.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/177/framework/trunk/lib/Adept/Mailer.php
+END
+Json.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/177/framework/trunk/lib/Adept/Json.php
+END
+List.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/375/framework/trunk/lib/Adept/List.php
+END
+Map.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/177/framework/trunk/lib/Adept/Map.php
+END
+Date.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/177/framework/trunk/lib/Adept/Date.php
+END
+Context.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/333/framework/trunk/lib/Adept/Context.php
+END
+CanonicalMap.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/177/framework/trunk/lib/Adept/CanonicalMap.php
+END
+Dispatcher.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/177/framework/trunk/lib/Adept/Dispatcher.php
+END
+Enumeration.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/177/framework/trunk/lib/Adept/Enumeration.php
+END
+RenderKit.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/177/framework/trunk/lib/Adept/RenderKit.php
+END

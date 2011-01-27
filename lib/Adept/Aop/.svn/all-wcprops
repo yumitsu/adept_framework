@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/!svn/ver/177/framework/trunk/lib/Adept/Aop
+END
+AnnotatedAdvice.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/177/framework/trunk/lib/Adept/Aop/AnnotatedAdvice.php
+END
+ProxyFactory.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/177/framework/trunk/lib/Adept/Aop/ProxyFactory.php
+END
+AbstractProxyObject.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/177/framework/trunk/lib/Adept/Aop/AbstractProxyObject.php
+END
+AbstractAdvice.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/Aop/AbstractAdvice.php
+END
+SelfInvokableMethod.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/177/framework/trunk/lib/Adept/Aop/SelfInvokableMethod.php
+END
+AnnotatedProxyObject.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/177/framework/trunk/lib/Adept/Aop/AnnotatedProxyObject.php
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/237/framework/trunk/lib/Adept/Component/Client
+END
+ParallelEffect.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Client/ParallelEffect.php
+END
+Effect.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Client/Effect.php
+END
+Logger.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Client/Logger.php
+END
+OverrideMethod.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Client/OverrideMethod.php
+END
+JsScript.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Client/JsScript.php
+END
+MethodAttribute.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Client/MethodAttribute.php
+END
+Listener.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/237/framework/trunk/lib/Adept/Component/Client/Listener.php
+END

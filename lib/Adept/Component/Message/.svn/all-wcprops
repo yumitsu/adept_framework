@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/374/framework/trunk/lib/Adept/Component/Message
+END
+SuggestArea.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Message/SuggestArea.php
+END
+List.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/203/framework/trunk/lib/Adept/Component/Message/List.php
+END
+FieldError.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Message/FieldError.php
+END
+Item.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/203/framework/trunk/lib/Adept/Component/Message/Item.php
+END
+SuggestItem.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Message/SuggestItem.php
+END
+InfoBox.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/326/framework/trunk/lib/Adept/Component/Message/InfoBox.php
+END
+Balloon.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Message/Balloon.php
+END
+ToolBox.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/374/framework/trunk/lib/Adept/Component/Message/ToolBox.php
+END

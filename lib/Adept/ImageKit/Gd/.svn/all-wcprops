@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/369/framework/trunk/lib/Adept/ImageKit/Gd
+END
+Provider.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/251/framework/trunk/lib/Adept/ImageKit/Gd/Provider.php
+END
+Container.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/369/framework/trunk/lib/Adept/ImageKit/Gd/Container.php
+END

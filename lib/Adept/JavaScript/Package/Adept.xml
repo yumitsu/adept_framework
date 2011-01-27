@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<packages xmlns="http://www.adept-project.com/ns/jspackage"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.adept-project.com/ns/jspackage jspackage.xsd ">
+
+	<package name="external" archive="external.js">
+		<file name="prototype.js" />
+	</package>
+    
+	<package name="adept.core" archive="adept.core.js">
+		<file name="Adept/Core.js" />
+		<file name="Adept/Logger.js" />
+		<file name="Adept/Logger/Writer.js" />
+		<file name="Adept/Logger/Writer/FireBug.js" />
+		<file name="Adept/Logger/Writer/Window.js" />
+		<file name="Adept/Config.js" />
+		<file name="Adept/Exception.js" />
+		<file name="Adept/Exception/IllegalState.js" />
+		<file name="Adept/Exception/IllegalArgument.js" />
+		<file name="Adept/Observer.js" />
+		<file name="Adept/ListenerChain.js" />
+		<file name="Adept/Event.js" />
+		<file name="Adept/Event/Dom.js" />
+		<file name="Adept/Assert.js" />
+		<file name="Adept/Application.js" />
+		<file name="Adept/DataBag.js" />
+		<required package="external" />
+	</package>
+	<package name="adept.ajax" archive="adept.ajax.js">
+		<file name="Adept/Ajax/Transport.js" />
+		<file name="Adept/Ajax/Backend.js" />
+		<file name="Adept/Ajax/Request.js" />
+		<file name="Adept/Ajax/Processor.js" />
+		<file name="Adept/Ajax/Command.js" />
+		<file name="Adept/Ajax/Command/Alert.js" />
+		<file name="Adept/Ajax/Command/Replace.js" />
+		<file name="Adept/Ajax/Command/Update.js" />
+		<file name="Adept/Ajax/Command/Event.js" />
+		<file name="Adept/Ajax/Command/Eval.js" />
+		<file name="Adept/Ajax/Command/Invoke.js" />
+		<file name="Adept/Ajax/Command/Redirect.js" />
+		<file name="Adept/Ajax/Command/Append.js" />
+		<file name="Adept/Ajax/Command/Redirect.js" />
+
+		<required package="adept.core" />
+	</package>
+
+	<package name="adept.validator" archive="adept.validator.js">
+		<file name="Adept/Validator/Abstract.js" />
+		<file name="Adept/Validator/Required.js" />
+		<file name="Adept/Validator/Email.js" />
+		<file name="Adept/Validator/Equal.js" />
+		<file name="Adept/Validator/Size.js" />
+		<file name="Adept/Validator/Pattern.js" />
+		<file name="Adept/Validator/Url.js" />
+		<file name="Adept/Validator/InArray.js" />
+		<file name="Adept/Validator/Number.js" />
+		<file name="Adept/Validator/PositiveNumber.js" />
+		<file name="Adept/Validator/Server.js" />
+
+		<required package="adept.core" />
+		<required package="adept.ajax" />
+	</package>
+
+	<package name="adept.controller" archive="adept.controller.js">
+		<file name="Adept/Controller.js" />
+		<file name="Adept/Controller/Throbber.js" />
+		<file name="Adept/Controller/Form.js" />
+		<file name="Adept/Controller/Pager.js" />
+		<file name="Adept/Controller/Timer.js" />
+		<file name="Adept/Controller/Scroll.js" />
+
+		<required package="adept.core" />
+		<required package="adept.ajax" />
+	</package>
+
+	<package name="adept.controller.form"
+		archive="adept.controller.form.js">
+		<file name="Adept/Controller/Form/AbstractButton.js" />
+		<file name="Adept/Controller/Form/Button.js" />
+		<file name="Adept/Controller/Form/CommandLink.js" />
+		<file name="Adept/Controller/Form/ActionButton.js" />
+		<file name="Adept/Controller/Form/ActionLink.js" />
+		<file name="Adept/Controller/Form/MultiFileUpload.js" />
+
+		<required package="adept.controller" />
+	</package>
+	
+	<package name="adept.controller.tabulator"
+		archive="adept.controller.tabulator.js">
+		<file name="Adept/Controller/Tabulator.js" />
+		<file name="Adept/Controller/TabItem.js" />
+	</package>
+		
+	<package name="adept.controller.colorpicker" archive="adept.controller.colorpicker.js" >
+	   <file name="Adept/Color.js" />
+	   <file name="Adept/Controller/ColorPicker.js" />
+	   <file name="Adept/Controller/ColorPicker/Marker.js" />
+	   <file name="Adept/Controller/ColorPicker/ValueControl.js" />
+	   <required package="adept.controller" />
+	</package>
+
+	<package name="adept.controller.message"
+		archive="adept.controller.message.js">
+		<file name="Adept/Controller/Message/Base.js" />
+		<file name="Adept/Controller/Message/ToolBox.js" />
+		<file name="Adept/Controller/Message/SuggestArea.js" />
+		<file name="Adept/Controller/Message/InfoBox.js" />
+	</package>
+
+	<package name="scriptaculous" archive="scriptaculous.js">
+		<file name="scriptaculous/builder.js" />
+		<file name="scriptaculous/effects.js" />
+		<required package="external" />
+	</package>
+
+
+	<package name="adept.effect" archive="adept.effect.js">
+		<file name="Adept/Effect/Base.js" />
+		<file name="Adept/Effect/Highlight.js" />
+		<file name="Adept/Effect/Appear.js" />
+		<file name="Adept/Effect/Fade.js" />
+		<file name="Adept/Effect/Morph.js" />
+		<file name="Adept/Effect/Move.js" />
+		<file name="Adept/Effect/Opacity.js" />
+		<file name="Adept/Effect/Scale.js" />
+		<file name="Adept/Effect/SlideDown.js" />
+		<file name="Adept/Effect/SlideUp.js" />
+		<file name="Adept/Effect/BlindUp.js" />
+		<file name="Adept/Effect/BlindDown.js" />
+		<file name="Adept/Effect/Parallel.js" />
+		<file name="Adept/Effect/Factory.js" />
+		<required package="adept.core" />
+		
+		<required package="scriptaculous" />
+		<required package="external" />
+		
+	</package>
+
+	<package name="adept.window" archive="adept.window.js">
+		<file name="Adept/Controller/Window.js" />
+		<file name="Adept/Controller/Window/Utils.js" />
+		<file name="Adept/Controller/Window/Overlay.js" />
+		<required package="adept.controller" />
+	</package>
+
+    <package name="adept.googlemap" archive="adept.googlemap">
+        <file name="Adept/Controller/Google/Map.js" />
+        <file name="Adept/Controller/Google/Marker.js" />
+        <required package="adept.controller" />
+    </package>
+</packages>
+
+

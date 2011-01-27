@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/191/framework/trunk/lib/Adept/Component/Resource
+END
+CssRequired.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Resource/CssRequired.php
+END
+RequireJs.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Resource/RequireJs.php
+END
+CssPlace.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/191/framework/trunk/lib/Adept/Component/Resource/CssPlace.php
+END
+JsRequired.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Resource/JsRequired.php
+END
+JsPlace.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Resource/JsPlace.php
+END
+RequireCss.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/177/framework/trunk/lib/Adept/Component/Resource/RequireCss.php
+END

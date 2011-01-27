@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/!svn/ver/484/framework/trunk/static/js/Adept
+END
+Config.js
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/3/framework/trunk/static/js/Adept/Config.js
+END
+Observer.js
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/47/framework/trunk/static/js/Adept/Observer.js
+END
+Core.js
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/376/framework/trunk/static/js/Adept/Core.js
+END
+ListenerChain.js
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/3/framework/trunk/static/js/Adept/ListenerChain.js
+END
+Color.js
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/321/framework/trunk/static/js/Adept/Color.js
+END
+Exception.js
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/3/framework/trunk/static/js/Adept/Exception.js
+END
+Trace.js
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/3/framework/trunk/static/js/Adept/Trace.js
+END
+Logger.js
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/3/framework/trunk/static/js/Adept/Logger.js
+END
+Event.js
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/3/framework/trunk/static/js/Adept/Event.js
+END
+Assert.js
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/3/framework/trunk/static/js/Adept/Assert.js
+END
+Controller.js
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/31/framework/trunk/static/js/Adept/Controller.js
+END
+DataBag.js
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/208/framework/trunk/static/js/Adept/DataBag.js
+END
+Application.js
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/3/framework/trunk/static/js/Adept/Application.js
+END

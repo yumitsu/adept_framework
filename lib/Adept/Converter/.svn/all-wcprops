@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/412/framework/trunk/lib/Adept/Converter
+END
+Json.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/177/framework/trunk/lib/Adept/Converter/Json.php
+END
+FileList.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/199/framework/trunk/lib/Adept/Converter/FileList.php
+END
+DateTime.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/412/framework/trunk/lib/Adept/Converter/DateTime.php
+END
+Array.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/177/framework/trunk/lib/Adept/Converter/Array.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/177/framework/trunk/lib/Adept/Converter/Exception.php
+END
+Boolean.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/177/framework/trunk/lib/Adept/Converter/Boolean.php
+END
+File.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/197/framework/trunk/lib/Adept/Converter/File.php
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/177/framework/trunk/lib/Adept/Converter/Interface.php
+END
+ItemsArray.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/177/framework/trunk/lib/Adept/Converter/ItemsArray.php
+END
+Url.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/233/framework/trunk/lib/Adept/Converter/Url.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/177/framework/trunk/lib/Adept/Converter/Abstract.php
+END
+Number.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/177/framework/trunk/lib/Adept/Converter/Number.php
+END

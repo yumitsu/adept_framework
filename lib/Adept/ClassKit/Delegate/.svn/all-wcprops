@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/177/framework/trunk/lib/Adept/ClassKit/Delegate
+END
+List.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/177/framework/trunk/lib/Adept/ClassKit/Delegate/List.php
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/177/framework/trunk/lib/Adept/ClassKit/Delegate/Interface.php
+END
+Function.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/177/framework/trunk/lib/Adept/ClassKit/Delegate/Function.php
+END
+Static.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/177/framework/trunk/lib/Adept/ClassKit/Delegate/Static.php
+END

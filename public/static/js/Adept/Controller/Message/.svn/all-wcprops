@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/376/framework/trunk/static/js/Adept/Controller/Message
+END
+InfoBox.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/329/framework/trunk/static/js/Adept/Controller/Message/InfoBox.js
+END
+Balloon.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/3/framework/trunk/static/js/Adept/Controller/Message/Balloon.js
+END
+ToolBox.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/376/framework/trunk/static/js/Adept/Controller/Message/ToolBox.js
+END
+Base.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/3/framework/trunk/static/js/Adept/Controller/Message/Base.js
+END
+SuggestArea.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/83/framework/trunk/static/js/Adept/Controller/Message/SuggestArea.js
+END

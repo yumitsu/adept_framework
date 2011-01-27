@@ -1,0 +1,144 @@
+
+/* A:TABSELECTOR */
+
+.a-tabulator .a-tabselectors {
+	position: relative;
+	left: 0;
+	top: 1px;
+	height: 22px;
+	z-index: 1;
+}
+
+
+.a-tabulator {
+	position: relative;
+	height: 500px;
+	overflow: hidden;
+	margin: 0;
+	padding: 21px 0 0 0;
+}
+
+.a-tabulator .a-tab {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #b9cfd8;
+	background-color: #ffffff;
+	padding: 17px;
+}
+
+.a-tabulator .a-tabselector {
+	height: 22px;
+	padding: 0;
+	border-style: none;
+}
+
+.a-tabulator .a-tabselector-div {
+	position: relative;
+	width: 100%;
+	height: 22px;
+}
+
+.a-tabulator .a-tabselector-left {
+	height: 22px;
+	cursor: default;
+	background-image: url(../../img/tabulator/tab_left.gif);
+	background-position: -1px -22px;
+	background-repeat: no-repeat;
+	padding: 0 0 0 4px;
+}
+
+.a-tabulator .a-tabselector-right {
+	background-image: url(../../img/tabulator/tab_right.gif);
+	background-position: 100% -22px;
+	background-repeat: no-repeat;
+	padding: 0 5px 0 0;
+	height: 22px;
+}
+.a-tabulator .a-tabselector-mid {
+    background-image: url(../../img/tabulator/tab_mid.gif);    	
+	background-position: 0 -22px;
+	background-repeat: repeat-x;
+	padding: 0px 12px 0 12px;
+	height: 22px;
+}
+
+.a-tabulator .a-tabselector-text {
+	overflow: hidden;
+	white-space: nowrap;
+	padding-top: 6px;
+	font-family: Verdana, Arial;
+	font-size: 11px;
+	color: black;
+}
+
+.a-tabulator .a-tabselector-first.a-tabselector .a-tabselector-left {
+	background-position: 0 -22px;
+}
+
+/* Hovered state */
+.a-tabulator .a-tabselector-hov .a-tabselector-left {
+    background-position: -1px -44px;
+}
+
+.a-tabulator .a-tabselector-first.a-tabselector-hov .a-tabselector-left {
+    background-position: 0 -44px; 
+}
+
+.a-tabulator .a-tabselector-hov .a-tabselector-right {
+    background-position: 100% -44px;
+}
+ 
+.a-tabulator .a-tabselector-hov .a-tabselector-mid {
+    background-position: 0 -44px;
+    cursor: pointer;
+}
+
+/* Selected state */
+.a-tabulator .a-tabselector-sel .a-tabselector-left {
+    background-position: -1px 0;
+}
+
+.a-tabulator .a-tabselector-first.a-tabselector-sel .a-tabselector-left {
+    background-position: 0 0;
+}
+
+.a-tabulator .a-tabselector-sel .a-tabselector-right {
+    background-position: 100% 0;
+}
+
+.a-tabulator .a-tabselector-sel .a-tabselector-mid 	{
+    background-position: 0 0;
+    cursor:default;
+}
+
+/* Focus indicator */
+
+.a-tabulator .a-tabselector-focus-border-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding: 6px 12px 3px 12px;
+}
+.a-tabulator .a-tabselector-focus-border {
+	border-width: 1px;
+	border-color: #aaaaaa;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.a-tabulator .a-tabselector-focus .a-tabselector-focus-border {
+	border-style: dotted;
+}
+
+/* Disabled state */
+
+.a-tabulator .a-tabselector-disabled {
+	color: #cccccc;
+}

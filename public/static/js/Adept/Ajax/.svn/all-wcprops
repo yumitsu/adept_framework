@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/367/framework/trunk/static/js/Adept/Ajax
+END
+Backend.js
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/108/framework/trunk/static/js/Adept/Ajax/Backend.js
+END
+Request.js
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/125/framework/trunk/static/js/Adept/Ajax/Request.js
+END
+Transport.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/126/framework/trunk/static/js/Adept/Ajax/Transport.js
+END
+Command.js
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/3/framework/trunk/static/js/Adept/Ajax/Command.js
+END
+Processor.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/116/framework/trunk/static/js/Adept/Ajax/Processor.js
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/219/framework/trunk/lib/Adept/Lifecycle
+END
+PhaseId.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/177/framework/trunk/lib/Adept/Lifecycle/PhaseId.php
+END
+PhaseInvoker.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/177/framework/trunk/lib/Adept/Lifecycle/PhaseInvoker.php
+END

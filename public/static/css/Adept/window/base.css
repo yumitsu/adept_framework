@@ -1,0 +1,73 @@
+@CHARSET "UTF-8";
+
+.a-overlay {
+    background-color: #85BBEF;
+    filter: alpha(opacity =   60);
+    -moz-opacity: 0.6;
+    opacity: 0.6;
+    width: 100%;
+    position: absolute;
+    top: 0pt;
+    left: 0pt;
+    z-index: 100;
+    padding: 0px;
+    margin: 0px;
+}
+
+.a-window {
+    display: none;
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    width: 400px;
+    padding: 0px;
+    margin: 0px;
+    z-index: 1000;
+    background-color: #FFF;
+    
+}
+
+.a-window-show {
+    display: block;
+}
+
+
+
+.a-window-head {
+    font-family: Arial, sans-serif;
+    width: 100%;
+        
+    
+}
+.a-draggable{
+    cursor: move;
+}
+	
+
+.a-window-title {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.a-window-icons {
+    position: relative;
+    float: right;
+}
+
+.a-window-icons-close {
+    background: transparent url(../../../img/Adept/window/default/button-close-focus.gif) no-repeat scroll 0pt;
+    cursor: pointer;
+    height: 23px;
+    width: 23px;
+}
+
+.a-window-content-border {
+    background-color: white;
+}
+
+.a-window-content {
+    background-color: white;
+    height: 100%;
+}
+

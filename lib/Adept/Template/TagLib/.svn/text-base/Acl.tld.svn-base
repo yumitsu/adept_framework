@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://adept-project.org/ns/taglib" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://adept-project.org/ns/taglib taglib.xsd" >
+    
+    <tag name="loggedIn" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <parameter name="component" value="Adept_Component_Acl_LoggedIn" />
+    </tag>    
+    
+    <tag name="notLoggedIn" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <parameter name="component" value="Adept_Component_Acl_NotLoggedIn" />
+    </tag>    
+
+    <tag name="role" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="role" required="true" />
+        
+        <parameter name="component" value="Adept_Component_Acl_Role" />
+    </tag>
+    
+    <tag name="notRole" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="role" required="true" />
+        
+        <parameter name="component" value="Adept_Component_Acl_NotRole" />
+    </tag>    
+    
+    <tag name="allow" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="role" />
+        <attribute name="privilege" />
+        <attribute name="resource" required="true" />
+        
+        <parameter name="component" value="Adept_Component_Acl_Allow" />
+    </tag>      
+        
+    <tag name="deny" tag_class="Adept_Template_TagLib_View_ComponentTag">
+        <attribute name="id" ignore_expressions="true" />
+        <attribute name="clientId" />
+        <attribute name="forceClientId" 
+            description="If true clientId will be independent on naming containers. " />
+        <attribute name="this" type="string" description="Component $this pointer binding. " />
+        
+        <attribute name="role" />
+        <attribute name="privilege" />
+        <attribute name="resource" required="true" />
+        
+        <parameter name="component" value="Adept_Component_Acl_Deny" />
+    </tag>      
+        
+    
+</taglib>

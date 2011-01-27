@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/177/framework/trunk/lib/Adept/Test/WebRunner/View
+END
+suite_list.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/177/framework/trunk/lib/Adept/Test/WebRunner/View/suite_list.tpl
+END
+show_result.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/177/framework/trunk/lib/Adept/Test/WebRunner/View/show_result.tpl
+END
